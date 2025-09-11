@@ -1,0 +1,26 @@
+/* src/components/Navbar.css */
+@reference "tailwindcss";
+/* These are Tailwind-powered component utilities */
+@layer components {
+  .btn-hover {
+    @apply relative overflow-hidden;
+  }
+  .btn-hover::before {
+    content: "";
+    @apply absolute top-0 left-[-100%] w-full h-full pointer-events-none;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: all 0.5s ease;
+    z-index: 0; /* ensure shine is behind text */
+  }
+  .btn-hover:hover::before {
+    left: 100%;
+  }
+  .btn-glow:hover {
+    box-shadow: 0 0 15px rgba(109, 40, 217, 0.5); /* purple glow */
+  }
+}
