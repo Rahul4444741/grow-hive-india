@@ -1,6 +1,6 @@
 import React from "react";
 // imports
-import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaStar, FaRegStar, FaStarHalfAlt, FaShoppingCart } from "react-icons/fa";
 
 // ⭐ Robust star row (handles 4.5, 4.0, etc.)
 const StarRow = ({ rating = 0, outOf = 5, className = "" }) => {
@@ -47,7 +47,7 @@ export default function ProductCard({ title, img, price, oldPrice, badge, rating
           </div>
         )}
       </div>
-      <div className="p-5">
+      <div className="p-5 grid grid-cols-1 grid-row-3 ">
         <div className="flex justify-between items-start">
           <h3 className="text-lg font-bold text-gray-900 mb-1">{title}</h3>
           <button className="text-gray-400 hover:text-red-500">
@@ -64,7 +64,7 @@ export default function ProductCard({ title, img, price, oldPrice, badge, rating
             {oldPrice && <span className="text-sm text-gray-500 line-through ml-2">₹{oldPrice}</span>}
           </div>
           <button className="w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center hover:bg-purple-700 transition">
-            <i className="fas fa-shopping-cart" />
+            <FaShoppingCart />
           </button>
         </div>
       </div>

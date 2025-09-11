@@ -1,5 +1,14 @@
 import React from "react";
-
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaWhatsapp,
+  FaMapMarkerAlt ,
+  FaEnvelope ,
+  FaPhoneAlt
+} from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8" id="contact">
@@ -12,11 +21,11 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 mb-6">Learn, Grow, and Succeed with India's Fastest Learning Hub</p>
             <div className="flex space-x-4 text-gray-400">
-              <a href="https://www.facebook.com/profile.php?id=61574957055667&mibextid=ZbWKwL" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-purple-600 hover:text-white transition" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-sky-500 hover:text-white transition" aria-label="Twitter"><i className="fab fa-twitter" /></a>
-              <a href="https://www.instagram.com/growhiveindia?igsh=OTdwb2JxaGNxaXJi" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-pink-600 hover:text-white transition" aria-label="Instagram"><i className="fab fa-instagram" /></a>
-              <a href="https://youtube.com/@growhiveindia?si=BW6xWHo4oqGjcqgI" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-red-600 hover:text-white transition" aria-label="YouTube"><i className="fab fa-youtube" /></a>
-              <a href="https://wa.me/919569574295" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-green-500 hover:text-white transition" aria-label="WhatsApp"><i className="fab fa-whatsapp" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61574957055667&mibextid=ZbWKwL" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-purple-600 hover:text-white transition" aria-label="Facebook"><FaFacebook /></a>
+              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-sky-500 hover:text-white transition" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://www.instagram.com/growhiveindia?igsh=OTdwb2JxaGNxaXJi" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-pink-600 hover:text-white transition" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://youtube.com/@growhiveindia?si=BW6xWHo4oqGjcqgI" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-red-600 hover:text-white transition" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://wa.me/919569574295" className="w-10 h-10 bg-gray-800 rounded-full grid place-items-center hover:bg-green-500 hover:text-white transition" aria-label="WhatsApp"><FaWhatsapp /></a>
             </div>
           </div>
 
@@ -46,10 +55,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Contact Us</h4>
             <ul className="space-y-3 text-gray-400">
-              <li className="flex items-start"><i className="fas fa-map-marker-alt text-purple-400 mt-1 mr-3" /><span>Gilat Bazar H.No.S.1/22-A-6, Kautilya Koin Marg, UCO Bank, Chotta Chuppepur, Varanasi Uttar Pradesh-221002</span></li>
-              <li className="flex items-center"><i className="fas fa-envelope text-purple-400 mr-3" /><span>growhiveindia@gmail.com</span></li>
-              <li className="flex items-center"><i className="fas fa-phone-alt text-purple-400 mr-3" /><span>+91 9569574295</span></li>
-              <li className="flex items-center"><i className="fab fa-whatsapp text-purple-400 mr-3" /><span>+91 9569574295</span></li>
+              <li className="flex items-start"><FaMapMarkerAlt className="text-6xl mr-3 text-purple-400 "/><span>Gilat Bazar H.No.S.1/22-A-6, Kautilya Koin Marg, UCO Bank, Chotta Chuppepur, Varanasi Uttar Pradesh-221002</span></li>
+              <li className="flex items-center"><FaEnvelope className="text-2xl mr-3 text-purple-400"/><span>growhiveindia@gmail.com</span></li>
+              <li className="flex items-center"><FaPhoneAlt className="text-2xl mr-3 text-purple-400"/><span>+91 9569574295</span></li>
+              <li className="flex items-center"><FaWhatsapp className="text-2xl mr-3 text-purple-400"/><span>+91 9569574295</span></li>
             </ul>
           </div>
         </div>
