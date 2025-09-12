@@ -12,11 +12,11 @@ import {
   FaMobileAlt,
   FaPlayCircle,
   FaCheck,
-  FaStar,
   FaFacebook,
   FaTwitter,
   FaInstagram,
-  FaYoutube
+  FaYoutube,
+  FaMedal
 } from "react-icons/fa";
 
 export default function Home() {
@@ -71,7 +71,7 @@ export default function Home() {
               <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="bg-purple-100 p-2 rounded-lg">
-                    <i className="fas fa-medal text-purple-700 text-xl" />
+                    <FaMedal className="text-purple-700 text-xl" />
                   </div>
                   <div>
                     <p className="font-bold">Bestseller Course</p>
