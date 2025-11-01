@@ -472,6 +472,72 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-6">
+      {/* Hero Section */}
+      <section className="relative w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+            Welcome to <span className="text-purple-700">Our Learning Hub</span>
+          </h1>
+          <p className="text-lg text-gray-600 mb-6">
+            Explore our curated courses designed to help you achieve your goals and enhance your skills with ease.
+          </p>
+          <button className="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-8 py-3 rounded-full shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer">
+            Get Started
+          </button>
+        </div>
+
+        <div className="flex-1 flex justify-center">
+          <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <img
+              src="../../../public/arushi.jpeg"
+              alt="Learning Banner"
+              className="rounded-2xl shadow-2xl w-full max-w-md h-auto border-8 border-white/20"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="mt-20 w-full max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+        <div className="flex justify-center">
+          <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <img
+              src="../../../sunny.jpeg"
+              alt="About Learning"
+              className="rounded-2xl shadow-xl w-full max-w-md h-auto"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">About Our Platform</h2>
+          <p className="text-gray-600 mb-4">
+            We provide industry-focused learning materials and video tutorials crafted by experienced mentors.
+            Our platform helps you stay ahead with up-to-date content in technology and innovation.
+          </p>
+          <p className="text-gray-600">
+            Join thousands of learners already benefiting from our courses and take your career to the next level.
+          </p>
+        </div>
+      </section>
+
+      {/* Instructor Section */}
+      <section className="mt-20 w-full max-w-6xl text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-10">Meet Your Instructors</h2>
+        <div className="flex flex-wrap justify-center gap-10">
+          <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <img
+              src="../../../arushi2.jpeg"
+              alt="Instructor"
+              className="rounded-2xl shadow-lg w-72 h-80 object-cover border-4 border-white"
+            />
+            <h3 className="text-xl font-semibold mt-4">Expert Mentor</h3>
+            <p className="text-gray-600">Specialist in Web Development</p>
+          </div>
+        </div>
+      </section>
+    </div>
 
       {/* FAQ */}
       <section className="py-16 bg-white">

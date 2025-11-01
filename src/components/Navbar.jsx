@@ -10,8 +10,9 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-            GH
+          <div
+                    class="w-10 h-10  from-primary-600 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl animate-pulse-slow hover:rotate-12 transition-transform">
+                 <img src="public\logo1.jpeg"/>
           </div>
           <a
             href="#"
