@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import SectionHeader from "../components/SectionHeader.jsx";
 import CourseCard from "../components/CourseCard.jsx";
 import ProductCard from "../components/ProductCard.jsx";
@@ -19,7 +19,29 @@ import {
   FaMedal
 } from "react-icons/fa";
 
-export default function Home() {
+export default function Home() 
+{
+   const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Try to play video with audio when component mounts
+    const playVideo = async () => {
+      if (videoRef.current) {
+        try {
+          videoRef.current.muted = false; // Unmute the video
+          await videoRef.current.play();
+        } catch (error) {
+          // If autoplay with audio fails, fallback to muted autoplay
+          console.log("Autoplay with audio failed, falling back to muted:", error);
+          videoRef.current.muted = true;
+          videoRef.current.play().catch(e => console.log("Autoplay failed:", e));
+        }
+      }
+    };
+
+    playVideo();
+  }, []);
+
   return (
     <>
       {/* Hero (simple) */}
@@ -61,28 +83,35 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="relative animate-float">
-              <img
-                src="https://images.unsplash.com/photo-1580867532901-7e3707f178ce?auto=format&fit=crop&w=1470&q=80"
-                alt="Learning"
-                className="rounded-2xl shadow-2xl max-w-md w-full border-8 border-white/20 rotate-2"
+      <div className="lg:w-1/2 flex justify-center">
+  <div className="relative animate-float">
+    <video
+                ref={videoRef}
+                src="C:\Users\Grest\Desktop\GrowHiveIndia\grow-hive-india\public\video.mp4" // Changed to public folder path
+                autoPlay
+                loop
+                playsInline
+                muted={false} // Start with audio enabled
+                controls={false}
+                className="rounded-2xl shadow-2xl max-w-md w-full border-8 border-white/20 rotate-2 cursor-pointer"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="bg-purple-100 p-2 rounded-lg">
-                    <FaMedal className="text-purple-700 text-xl" />
-                  </div>
-                  <div>
-                    <p className="font-bold">Bestseller Course</p>
-                    <p className="text-sm text-gray-600">
-                      Digital Marketing Masterclass
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
+      <div className="flex items-center gap-3">
+        <div className="bg-purple-100 p-2 rounded-lg">
+          <FaMedal className="text-purple-700 text-xl" />
+        </div>
+        <div>
+          <p className="font-bold">Bestseller Course</p>
+          <p className="text-sm text-gray-600">
+            Digital Marketing Masterclass
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
         </div>
       </section>
       <section id="features" className="py-16 bg-white">
