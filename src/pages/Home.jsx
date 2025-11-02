@@ -87,13 +87,13 @@ export default function Home()
   <div className="relative animate-float">
     <video
                 ref={videoRef}
-                src="C:\Users\Grest\Desktop\GrowHiveIndia\grow-hive-india\public\video.mp4" // Changed to public folder path
+                src="../../../video.mp4"
                 autoPlay
                 loop
                 playsInline
-                muted={false} // Start with audio enabled
-                controls={false}
-                className="rounded-2xl shadow-2xl max-w-md w-full border-8 border-white/20 rotate-2 cursor-pointer"
+                muted={true} // Start with audio enabled
+                controls={true}
+                className="rounded-2xl shadow-2xl max-w-md w-full h-[50%] border-8 border-white/20 rotate-2 cursor-pointer"
               />
     <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
       <div className="flex items-center gap-3">
