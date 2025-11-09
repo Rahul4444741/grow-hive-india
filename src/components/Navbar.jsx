@@ -1,6 +1,8 @@
 // src/components/Navbar.jsx
 import { useState } from "react";
 import "./Navbar.css"; // custom component utilities
+import logo from '../../public/logo1.jpeg';    
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <div
                     class="w-10 h-10  from-primary-600 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl animate-pulse-slow hover:rotate-12 transition-transform">
-                 <img src="public\logo1.jpeg"/>
+                 <img src={logo} alt="GrowHiveIndia Logo" />
           </div>
           <a
             href="#"

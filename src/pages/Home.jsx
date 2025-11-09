@@ -18,6 +18,7 @@ import {
   FaYoutube,
   FaMedal
 } from "react-icons/fa";
+import arushi from '../../public/arushi.jpeg';
 
 export default function Home() 
 {
@@ -519,7 +520,7 @@ export default function Home()
         <div className="flex-1 flex justify-center">
           <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
             <img
-              src="../../../public/arushi.jpeg"
+              src={arushi}
               alt="Learning Banner"
               className="rounded-2xl shadow-2xl w-full max-w-md h-auto border-8 border-white/20"
             />
