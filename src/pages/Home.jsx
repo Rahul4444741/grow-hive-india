@@ -19,6 +19,7 @@ import {
   FaMedal
 } from "react-icons/fa";
 import arushi from '../../public/arushi.jpeg';
+import GrowHiveIndiaReview from "../components/GrowHiveIndiaReview.jsx";
 
 export default function Home() 
 {
@@ -643,6 +644,11 @@ export default function Home()
           </div>
         </div>
       </section>
+      {/* Review */}
+      <section>
+        <GrowHiveIndiaReview/>
+      </section>
+
     </>
   );
 }
