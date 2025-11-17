@@ -68,7 +68,6 @@ const GrowHiveIndiaReview = () => {
   const [hoverRating, setHoverRating] = useState(0);
   const [showThankYou, setShowThankYou] = useState(false);
   
-  // const websiteUrl = "https://search.google.com/local/writereview?placeid=ChIJrTLr-GyuEmsRBfy61i59si0";
   const websiteUrl = "https://www.growhiveindia.com/";
 
   const handleSubmitReview = () => {

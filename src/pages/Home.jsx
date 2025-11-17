@@ -16,14 +16,13 @@ import {
   FaTwitter,
   FaInstagram,
   FaYoutube,
-  FaMedal
+  FaMedal,
 } from "react-icons/fa";
-import arushi from '../../public/arushi.jpeg';
+import arushi from "../../public/arushi.jpeg";
 import GrowHiveIndiaReview from "../components/GrowHiveIndiaReview.jsx";
 
-export default function Home() 
-{
-   const videoRef = useRef(null);
+export default function Home() {
+  const videoRef = useRef(null);
 
   useEffect(() => {
     // Try to play video with audio when component mounts
@@ -34,9 +33,14 @@ export default function Home()
           await videoRef.current.play();
         } catch (error) {
           // If autoplay with audio fails, fallback to muted autoplay
-          console.log("Autoplay with audio failed, falling back to muted:", error);
+          console.log(
+            "Autoplay with audio failed, falling back to muted:",
+            error
+          );
           videoRef.current.muted = true;
-          videoRef.current.play().catch(e => console.log("Autoplay failed:", e));
+          videoRef.current
+            .play()
+            .catch((e) => console.log("Autoplay failed:", e));
         }
       }
     };
@@ -60,12 +64,13 @@ export default function Home()
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
           <div className="lg:w-1/2">
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-              Launch Your
+              Launch Your{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-emerald-200">
                 Learning Journey
-              </span>
+              </span>{" "}
               Today
             </h1>
+
             <p className="text-lg md:text-xl mb-8 text-white/90 max-w-xl">
               Explore premium courses & products to unlock your potential and
               achieve success.
@@ -85,9 +90,9 @@ export default function Home()
               </a>
             </div>
           </div>
-      <div className="lg:w-1/2 flex justify-center">
-  <div className="relative animate-float">
-    <video
+          <div className="lg:w-1/2 flex justify-center">
+            <div className="relative animate-float">
+              <video
                 ref={videoRef}
                 src="../../../video.mp4"
                 autoPlay
@@ -97,23 +102,21 @@ export default function Home()
                 controls={true}
                 className="rounded-2xl shadow-2xl max-w-md w-full h-[50%] border-8 border-white/20 rotate-2 cursor-pointer"
               />
-    <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
-      <div className="flex items-center gap-3">
-        <div className="bg-purple-100 p-2 rounded-lg">
-          <FaMedal className="text-purple-700 text-xl" />
-        </div>
-        <div>
-          <p className="font-bold">Bestseller Course</p>
-          <p className="text-sm text-gray-600">
-            Digital Marketing Masterclass
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+              <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 p-4 rounded-xl shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="bg-purple-100 p-2 rounded-lg">
+                    <FaMedal className="text-purple-700 text-xl" />
+                  </div>
+                  <div>
+                    <p className="font-bold">Bestseller Course</p>
+                    <p className="text-sm text-gray-600">
+                      Digital Marketing Masterclass
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="features" className="py-16 bg-white">
@@ -123,7 +126,7 @@ export default function Home()
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-              Grow Faster With
+              Grow Faster With {" "}
               <span className="gradient-text">GrowHiveIndia</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -504,71 +507,79 @@ export default function Home()
         </div>
       </section>
       <div className="bg-gray-50 min-h-screen flex flex-col items-center justify-center p-6">
-      {/* Hero Section */}
-      <section className="relative w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-10">
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-            Welcome to <span className="text-purple-700">Our Learning Hub</span>
-          </h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Explore our curated courses designed to help you achieve your goals and enhance your skills with ease.
-          </p>
-          <button className="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-8 py-3 rounded-full shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer">
-            Get Started
-          </button>
-        </div>
-
-        <div className="flex-1 flex justify-center">
-          <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <img
-              src={arushi}
-              alt="Learning Banner"
-              className="rounded-2xl shadow-2xl w-full max-w-md h-auto border-8 border-white/20"
-            />
+        {/* Hero Section */}
+        <section className="relative w-full max-w-6xl flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+              Welcome to{" "}
+              <span className="text-purple-700">Our Learning Hub</span>
+            </h1>
+            <p className="text-lg text-gray-600 mb-6">
+              Explore our curated courses designed to help you achieve your
+              goals and enhance your skills with ease.
+            </p>
+            <button className="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-8 py-3 rounded-full shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer">
+              Get Started
+            </button>
           </div>
-        </div>
-      </section>
 
-      {/* About Section */}
-      <section className="mt-20 w-full max-w-6xl grid md:grid-cols-2 gap-10 items-center">
-        <div className="flex justify-center">
-          <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <img
-              src="../../../sunny.jpeg"
-              alt="About Learning"
-              className="rounded-2xl shadow-xl w-full max-w-md h-auto"
-            />
+          <div className="flex-1 flex justify-center">
+            <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <img
+                src={arushi}
+                alt="Learning Banner"
+                className="rounded-2xl shadow-2xl w-full max-w-md h-auto border-8 border-white/20"
+              />
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">About Our Platform</h2>
-          <p className="text-gray-600 mb-4">
-            We provide industry-focused learning materials and video tutorials crafted by experienced mentors.
-            Our platform helps you stay ahead with up-to-date content in technology and innovation.
-          </p>
-          <p className="text-gray-600">
-            Join thousands of learners already benefiting from our courses and take your career to the next level.
-          </p>
-        </div>
-      </section>
-
-      {/* Instructor Section */}
-      <section className="mt-20 w-full max-w-6xl text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-10">Meet Your Instructors</h2>
-        <div className="flex flex-wrap justify-center gap-10">
-          <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <img
-              src="../../../arushi2.jpeg"
-              alt="Instructor"
-              className="rounded-2xl shadow-lg w-72 h-80 object-cover border-4 border-white"
-            />
-            <h3 className="text-xl font-semibold mt-4">Expert Mentor</h3>
-            <p className="text-gray-600">Specialist in Web Development</p>
+        {/* About Section */}
+        <section className="mt-20 w-full max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+          <div className="flex justify-center">
+            <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <img
+                src="../../../sunny.jpeg"
+                alt="About Learning"
+                className="rounded-2xl shadow-xl w-full max-w-md h-auto"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              About Our Platform
+            </h2>
+            <p className="text-gray-600 mb-4">
+              We provide industry-focused learning materials and video tutorials
+              crafted by experienced mentors. Our platform helps you stay ahead
+              with up-to-date content in technology and innovation.
+            </p>
+            <p className="text-gray-600">
+              Join thousands of learners already benefiting from our courses and
+              take your career to the next level.
+            </p>
+          </div>
+        </section>
+
+        {/* Instructor Section */}
+        <section className="mt-20 w-full max-w-6xl text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+            Meet Your Instructors
+          </h2>
+          <div className="flex flex-wrap justify-center gap-10">
+            <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <img
+                src="../../../arushi2.jpeg"
+                alt="Instructor"
+                className="rounded-2xl shadow-lg w-72 h-80 object-cover border-4 border-white"
+              />
+              <h3 className="text-xl font-semibold mt-4">Expert Mentor</h3>
+              <p className="text-gray-600">Specialist in Web Development</p>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* FAQ */}
       <section className="py-16 bg-white">
@@ -624,20 +635,58 @@ export default function Home()
           <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">Stay Updated</h2>
-                <p className="text-gray-600 mb-4">Subscribe for course updates, exclusive discounts, and learning tips.</p>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+                  Stay Updated
+                </h2>
+                <p className="text-gray-600 mb-4">
+                  Subscribe for course updates, exclusive discounts, and
+                  learning tips.
+                </p>
                 <div className="flex gap-4 text-gray-700">
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-purple-600 hover:text-white transition"><FaFacebook  /></a>
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-sky-500 hover:text-white transition"><FaTwitter /></a>
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-pink-600 hover:text-white transition"><FaInstagram /></a>
-                  <a href="#" className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-red-600 hover:text-white transition"><FaYoutube /></a>
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-purple-600 hover:text-white transition"
+                  >
+                    <FaFacebook />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-sky-500 hover:text-white transition"
+                  >
+                    <FaTwitter />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-pink-600 hover:text-white transition"
+                  >
+                    <FaInstagram />
+                  </a>
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-gray-100 rounded-full grid place-items-center hover:bg-red-600 hover:text-white transition"
+                  >
+                    <FaYoutube />
+                  </a>
                 </div>
               </div>
               <div className="md:w-1/2 w-full">
                 <form className="space-y-4">
-                  <input type="text" placeholder="Your Name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
-                  <input type="email" placeholder="Your Email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
-                  <button type="submit" className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-lg hover:from-purple-700 hover:to-purple-900 transition font-bold">Subscribe Now</button>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-lg hover:from-purple-700 hover:to-purple-900 transition font-bold"
+                  >
+                    Subscribe Now
+                  </button>
                 </form>
               </div>
             </div>
@@ -646,9 +695,8 @@ export default function Home()
       </section>
       {/* Review */}
       <section>
-        <GrowHiveIndiaReview/>
+        <GrowHiveIndiaReview />
       </section>
-
     </>
   );
 }

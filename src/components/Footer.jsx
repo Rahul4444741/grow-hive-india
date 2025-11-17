@@ -9,6 +9,8 @@ import {
   FaEnvelope ,
   FaPhoneAlt
 } from "react-icons/fa";
+import logo from '../../public/logo1.jpeg';   
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8" id="contact">
@@ -16,7 +18,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xl">GH</div>
+                <div
+                                  class="w-10 h-10 border-radius-[25px] from-primary-600 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl animate-pulse-slow hover:rotate-12 transition-transform">
+                               <img src={logo} alt="GrowHiveIndia Logo" />
+                        </div>
               <a href="#" className="text-2xl font-extrabold text-white hover:text-purple-400 transition">Grow<span className="text-purple-400">Hive</span>India</a>
             </div>
             <p className="text-gray-400 mb-6">Learn, Grow, and Succeed with India's Fastest Learning Hub</p>
