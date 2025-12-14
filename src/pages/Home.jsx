@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import arushi from "../../public/arushi.jpeg";
 import GrowHiveIndiaReview from "../components/GrowHiveIndiaReview.jsx";
+import SuccessStories from "../components/SucessSotires.jsx";
 
 export default function Home() {
   const videoRef = useRef(null);
@@ -696,6 +697,9 @@ export default function Home() {
       {/* Review */}
       <section>
         <GrowHiveIndiaReview />
+      </section>
+      <section>
+        <SuccessStories />
       </section>
     </>
   );
