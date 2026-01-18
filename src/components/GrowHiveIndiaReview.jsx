@@ -431,7 +431,7 @@ const GrowHiveGoogleReviews = () => {
           >
             <h1 className="text-5xl md:text-8xl font-black text-white mb-4 leading-tight">
               <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent relative">
-                GrowHive
+                GrowHive India
                 <motion.span
                   animate={{ opacity: [0, 1, 0] }}
                   transition={{ duration: 1, repeat: Infinity }}
